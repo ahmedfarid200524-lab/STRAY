@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <nav >
+        <div class="d-flex justify-content-between align-items-center  position-fixed w-100 p-3 pb-1 ps-5 pe-5 z-3 nav-color">
+            <div class="nav-logo "><img src="./main-img/stray-logo.png" alt="" class="w-100"></div>
+            <div>
+                <ul class="list-unstyled d-flex gap-5 justify-content-center align-items-center mb-0 " >
+                    <li class="nav-menu hide"><a class="text-decoration-none " href="">COLLECTION Ⓞ   </a></li>
+                    <li class="nav-menu hide"><a class="text-decoration-none " href="">SHOP Ⓞ  </a></li>
+                    <li class="nav-menu hide"><a class="text-decoration-none " href="">ABOUT Ⓞ </a></li>
+                    <li class="nav-menu hide"><a class="text-decoration-none " href="">LOOKBOOK Ⓞ </a></li>
+                    <li class="nav-menu hide"><a class="text-decoration-none " href=""> CONTACT Ⓞ </a></li>
+                   
+                </ul>
+            </div>
+            <div>
+                <ul class="list-unstyled d-flex gap-4 justify-content-center align-items-center mb-0">
+                    <li class="nav-menu"><a  class="text-decoration-none text-white" href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    <li class="nav-menu"><a class="text-decoration-none text-white" href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
+                    <li class="nav-menu hide"><a class="text-decoration-none text-white" href=""><i class="fa-regular fa-user"></i></a></li>
+                     <li onclick=toggleSidebar() class="sidebar-tab"  ><i class="fa-solid fa-bars fs-5 mt-2 text-white "></i></li>
+                </ul>
+                 <ul class="list-unstyled  gap-3 p-3 mb-0 sidebar" >
+                    <li class="nav-menu"><a class="text-decoration-none " href="">COLLECTION Ⓞ   </a></li>
+                    <li class="nav-menu"><a class="text-decoration-none " href="">SHOP Ⓞ  </a></li>
+                    <li class="nav-menu"><a class="text-decoration-none " href="">ABOUT Ⓞ </a></li>
+                    <li class="nav-menu"><a class="text-decoration-none " href="">LOOKBOOK Ⓞ </a></li>
+                    <li class="nav-menu"><a class="text-decoration-none " href=""> CONTACT Ⓞ </a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero position-relative">
+        <video src="./main-img/hero-vid.MP4" autoplay loop muted plays-inline class="hero-vid" ></video>
+
+        <div class="hero-det p-3 ">
+            <p class="fs-12 m-hero-lg text-secondary">[ OUTERWEAR SYSTEMS 01 ]</p>
+            <h1 class="fw-bolder lg-h1 mb-0"> COLLECTION </h1>
+            <p class="fw-bolder  m-hero-lg lg-h1">STRAY 01™</p>
+            <p class="fs-12  text-secondary">BUILT FOR THE STRAY.</p>
+            <p class="fs-12  text-secondary">DESIGNED TO STAND OUT.</p>
+            <p class="fs-12 m-hero-lg  text-secondary">MADE TO OUTLAST.</p>
+            <button class="hero-btn m-hero-lg"> SHOP THE COLLECTION </button>
+           
+        </div>
+
+        <div class="hero-line w-100 ps-4 pe-4">
+            <p>01</p>
+            <div class="gray-line">
+                <div class="white-line"> </div>
+            </div>
+            <p>05</p>
+        </div>
+        <div class="hero-product">
+            <div class="d-flex gap-2 justify-content-center">
+                <img src="./product-img/hero-prod-front.png" alt="" class="hero-product-img">
+                <img src="./product-img/hero-prod-back.JPG" alt="" class="hero-product-img">
+                
+            </div>
+            <div class="d-flex justify-content-center m-auto mt-4 gap-3 w-75 ps-4 pe-4">
+            <p class="text-white">01</p>
+            <div class="gray-line">
+                <div class="white-line"> </div>
+            </div>
+            <p class="text-white">05</p>
+        </div>
+        </div>
+        
+    </section>
+    <section class="aurora-img" tabindex="1"></section>
+    <section class="aurora-img-mob" tabindex="1"></section>
+
+    <section class="products " tabindex="2">
+        <h2 class="text-white fw-bold">NEW COLLECTION</h2>
+    
+
+       <ul class="nav nav-pills mb-3 d-flex justify-content-center align-items-center gap-3" id="pills-tab" role="tablist">
+  <li class="nav-item text-white" role="presentation">
+    <button class="tab active " id="ALL-tab" data-bs-toggle="pill" data-bs-target="#pills-ALL" type="button" role="tab" aria-controls="pills-ALL" aria-selected="true">ALL</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="tab" id="TEES-tab" data-bs-toggle="pill" data-bs-target="#pills-TEES" type="button" role="tab" aria-controls="pills-TEES" aria-selected="false">TEES</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="tab" id="JACKETS" data-bs-toggle="pill" data-bs-target="#pills-JACKETS" type="button" role="tab" aria-controls="pills-JACKETS" aria-selected="false">JACKETS</button>
+  </li>
+   <li class="nav-item" role="presentation">
+    <button class="tab" id="pants-tab" data-bs-toggle="pill" data-bs-target="#pills-PANTS" type="button" role="tab" aria-controls="pills-PANTS" aria-selected="false">PANTS</button>
+  </li>
+
+</ul>
+
+
+<div class="tab-content" id="pills-tabContent">
+
+  <div class="tab-pane fade show active" id="pills-ALL" role="tabpanel" aria-labelledby="ALL-tab" tabindex="0">
+    
+    <div class="d-flex justify-content-around flex-wrap">
+         <div class="product-card position-relative">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/tee1.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA STRAY</p>
+            <p class="mb-0">BLACK HENLEY TEE</p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="black-c"></div>
+                <p class="mb-0">BLACK</p>
+            </div>
+        </div>
+    </div>
+    <div class="product-card position-relative">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/tee2.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA STRAY</p>
+            <p class="mb-0">GRAY HENLEY TEE</p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="gray-c"></div>
+                <p class="mb-0">GRAY</p>
+            </div>
+        </div>
+    </div>
+    <div class="product-card position-relative ">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/tee3.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">STRAY B</p>
+            <p class="mb-0">BLACK BASIC TEE</p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="black-c"></div>
+                <p class="mb-0">BLACK</p>
+            </div>
+        </div>
+    </div>
+    <div class="product-card position-relative ">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/j1.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA BLACK </p>
+            <p class="mb-0">BLACK PUFFER JACKET </p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="black-c"></div>
+                <p class="mb-0">BLACK</p>
+            </div>
+        </div>
+    </div>
+     <div class="product-card position-relative ">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/j2.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA SILVER </p>
+            <p class="mb-0">SILVER PUFFER JACKET </p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="black-c"></div>
+                <p class="mb-0">SILVER</p>
+            </div>
+        </div>
+    </div>
+     <div class="product-card position-relative ">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/j3.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA CAMEL LEATHER </p>
+            <p class="mb-0">LEATHER JACKET </p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="camel-c"></div>
+                <p class="mb-0">CAMEL</p>
+            </div>
+        </div>
+    </div>
+    <div class="product-card position-relative ">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/j4.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA CAMEL LEATHER </p>
+            <p class="mb-0">LEATHER JACKET </p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="black-c"></div>
+                <p class="mb-0">BLACK</p>
+            </div>
+        </div>
+    </div>
+       <div class="product-card position-relative ">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/p1.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA SWEATS </p>
+            <p class="mb-0">GRAY SWEATPAMTS </p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="gray-c"></div>
+                <p class="mb-0">GRAY</p>
+            </div>
+        </div>
+    </div>
+    <div class="product-card position-relative ">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/tee2.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA SWEATS </p>
+            <p class="mb-0">BLACK SWEATPAMTS </p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="black-c"></div>
+                <p class="mb-0">BLACK</p>
+            </div>
+        </div>
+    </div>
+     <div class="product-card position-relative ">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/tee3.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA SWEATS </p>
+            <p class="mb-0">cameo SWEATPAMTS </p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="cameo-c"></div>
+                <p class="mb-0">cameo</p>
+                
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+
+
+
+  </div>
+
+  <div class="tab-pane fade " id="pills-TEES" role="tabpanel" aria-labelledby="TEES-tab" tabindex="0">
+    <div class="d-flex justify-content-around flex-wrap"> 
+    <div class="product-card position-relative">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/tee1.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA STRAY</p>
+            <p class="mb-0">BLACK HENLEY TEE</p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="black-c"></div>
+                <p class="mb-0">BLACK</p>
+            </div>
+        </div>
+    </div>
+    <div class="product-card position-relative">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/tee2.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA STRAY</p>
+            <p class="mb-0">GRAY HENLEY TEE</p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="gray-c"></div>
+                <p class="mb-0">GRAY</p>
+            </div>
+        </div>
+    </div>
+    <div class="product-card position-relative ">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/tee3.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">STRAY B</p>
+            <p class="mb-0">BLACK BASIC TEE</p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="black-c"></div>
+                <p class="mb-0">BLACK</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+  </div>
+
+
+  <div class="tab-pane fade " id="pills-JACKETS" role="tabpanel" aria-labelledby="JACKETS-tab" tabindex="0">
+    <div class="d-flex justify-content-around flex-wrap"> 
+
+    <div class="product-card position-relative ">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/j1.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA BLACK </p>
+            <p class="mb-0">BLACK PUFFER JACKET </p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="black-c"></div>
+                <p class="mb-0">BLACK</p>
+            </div>
+        </div>
+    </div>
+     <div class="product-card position-relative ">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/j2.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA SILVER </p>
+            <p class="mb-0">SILVER PUFFER JACKET </p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="black-c"></div>
+                <p class="mb-0">SILVER</p>
+            </div>
+        </div>
+    </div>
+     <div class="product-card position-relative ">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/j3.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA CAMEL LEATHER </p>
+            <p class="mb-0">LEATHER JACKET </p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="camel-c"></div>
+                <p class="mb-0">CAMEL</p>
+            </div>
+        </div>
+    </div>
+    <div class="product-card position-relative ">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/j4.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA CAMEL LEATHER </p>
+            <p class="mb-0">LEATHER JACKET </p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="black-c"></div>
+                <p class="mb-0">BLACK</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+  </div>
+
+  <div class="tab-pane fade" id="pills-PANTS" role="tabpanel" aria-labelledby="PANTS" tabindex="0">
+    <div class="d-flex justify-content-around flex-wrap">
+
+      <div class="product-card position-relative ">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/p1.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA SWEATS </p>
+            <p class="mb-0">GRAY SWEATPAMTS </p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="gray-c"></div>
+                <p class="mb-0">GRAY</p>
+            </div>
+        </div>
+    </div>
+    <div class="product-card position-relative ">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/tee2.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA SWEATS </p>
+            <p class="mb-0">BLACK SWEATPAMTS </p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="black-c"></div>
+                <p class="mb-0">BLACK</p>
+            </div>
+        </div>
+    </div>
+     <div class="product-card position-relative ">
+        <div ><i class="fa-regular fa-heart like "></i></div>
+        <img src="./product-img/tee3.png" alt="" class="product-card-img">
+        <div class="text-white mt-3">
+            <p class="mb-0 fs-12">AURORA SWEATS </p>
+            <p class="mb-0">cameo SWEATPAMTS </p>
+            <div class="d-flex align-items-center gap-2">
+                <div class="cameo-c"></div>
+                <p class="mb-0">cameo</p>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+    </section>
+
+    <section class="mountain" tabindex="3">
+        <div class="inner-mountain"> 
+        <p class="text-secondary mb-0"> [ BUILT DIFFERENT ]</p>
+        <P class="fs-2 fw-bold mb-0 text-white">BUILT FOR COLD</P>
+        <P  class="fs-2 fw-bold mb-0 text-white">MADE FOR HEIGHT</P>
+        <P class="fs-2 fw-bold mb-0 text-white mb-4">FORGED TO LAST</P>
+        <button class="hero-btn m-hero-lg "> EXPLORE MORE</button>
+        </div>
+        <div class="mountain-abs-lg1">
+            <p class="text-white">
+                [ WE DON'T FOLLOW <BR> THE PATH.</BR> WE LEAVE OUR OWN. ]
+            </p>
+            <P class="mb-0 text-white mt-3"> STRAY 01™</P>
+            <P class="mb-0 text-white"> OUTERWEAR SYSTEMS</P>
+        </div>
+            <div class="mountain-abs-lg2">
+            <p class="text-white">
+                FOR THOSEWHO <BR> THE MOVE DIFFERENT.
+            </p>
+            
+        </div>
+        
+    </section>
+
+    <section class="testmonials p-5 pt-5" tabindex="4" id="TESTIMONIALS">
+
+        <div class="test-head d-flex justify-content-lg-between justify-content-center">
+            <div><h2 class=" text-white fw-bold fs-1">TESTIMONIALS</h2></div>
+            <div class="test-head-p">
+                <p class="mb-0 text-secondary fs-12">REAL PEOPLE. REAL REVIEWS.</p>
+                <p class="mb-0 text-secondary fs-12">STRAY ISN'T JUS CLOTHING.</p>
+                <p class="mb-0 text-secondary fs-12 ms-5"> IT'S A MOVEMENT</p>
+            </div>
+        </div>
+        <div class="test-main">
+            <div class="test-card">
+            <div class="av-det d-flex justify-content-between">
+                <div class="d-flex g-5" style="gap: 10px;">
+                    <div class="av-img">
+                        <img src="./main-img/av-man.png" alt="" class="" style="width: 50px; border-radius: 100px;">
+                    </div>
+                    <div class="av-name">
+                        <p class="text-white mb-0">AIDEN  F.</p>
+                        <p class="text-secondary mb-0">TORONTO.  CA</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center me-3">
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                </div>
+            </div>
+           
+            <div class="test-dis">
+                <p class="fs-6 text-white mt-3 "> The quality is insane. <br>You can feel the difference <br> as soon as you put it on. <br>STRAY nailed the details</p>
+            </div>
+            <div class="test-product">
+                <img src="./product-img/test1.png" alt="" class="test-product-img"  >
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                    <p class="mb-0 text-secondary">STEALTH PARACHUTE PANTS</p>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-secondary"></i>
+            </div>
+            </div>            
+            <div class="test-card-lg">
+            <div class="av-det d-flex justify-content-between">
+                <div class="d-flex g-5" style="gap: 10px;">
+                    <div class="av-img">
+                        <img src="./main-img/av-man.png" alt="" class="" style="width: 50px; border-radius: 100px;">
+                    </div>
+                    <div class="av-name">
+                        <p class="text-white mb-0">JAMES C.</p>
+                        <p class="text-secondary mb-0">California </p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center me-3">
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                </div>
+            </div>
+           
+            <div class="test-dis">
+                <p class="fs-6 text-white mt-3 "> The quality is insane. <br>
+    The fit is perfect <br>
+     and I've already ordered another one.</p>
+            </div>
+            <div class="test-product">
+                <img src="product-img/boxytee.png" alt="" class="test-product-img"  >
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                    <p class="mb-0 text-secondary">Essential Boxy Tee</p>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-secondary"></i>
+            </div>
+            </div>
+            <div class="test-card-lg">
+            <div class="av-det d-flex justify-content-between">
+                <div class="d-flex g-5" style="gap: 10px;">
+                    <div class="av-img">
+                        <img src="main-img/av-girl (1).png" alt="" class="" style="width: 50px; border-radius: 100px;">
+                    </div>
+                    <div class="av-name">
+                        <p class="text-white mb-0">SOPHIA M.</p>
+                        <p class="text-secondary mb-0">Texas</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center me-3">
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                </div>
+            </div>
+           
+            <div class="test-dis">
+                <p class="fs-6 text-white mt-3 "> Super comfortable and premium. <br>
+      It feels even better than <br>
+       it looks in the photos.</p>
+            </div>
+            <div class="test-product">
+                <img src="product-img/test1.png" alt="" class="test-product-img"  >
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                    <p class="mb-0 text-secondary">Wide Leg Cargo Pants</p>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-secondary"></i>
+            </div>
+        </div>
+
+        </div>
+        
+
+        </div>
+        <div class="change-test">
+            <button onclick=" changetestmoials()">MORE</button>
+        </div>
+    </section>
+
+    <section class="movment-sec" tabindex="5">
+        <div class="movment">
+            <div class="  move-img" >
+                <img src="./main-img/movement1.png" alt="" style="width: 100%;height: 100%;">
+            </div>
+            <div class=" w-25 d-flex flex-column justify-content-center align-items-center">
+                <img src="./main-img/movmentstar.png" alt="" style="width: 200px;">
+                <h2 class="text-white fw-bold">JOIN THE MOVEMENT</h2>
+                <P class="mb-0 text-secondary">TAG @STRAY.OFFICIAL TO GET FEATURED </P>
+                <P class="mb-0 text-secondary"> AND BE PART OF THE CULTURE. </P>
+            </div>
+            <div class=" w-25 position-relative">
+                <video src="./main-img/2026-07-18 18_35_12.MP4" autoplay loop muted plays-inline class="movement-vid" ></video>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="bg-black">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="text-white fs-5">STRAY</div>
+            <div class="text-white">©2025 STRAY. ALL RIGHTS RESERVED</div>
+            <div><UL class="d-flex justify-content-between align-items-center list-unstyled text-white gap-2 mb-0">
+                <li><i class="fa-brands fa-instagram text-white curs-point"></i></li>
+                <li><i class="fa-brands fa-facebook-f text-white curs-point"></i></li>
+                <li><i class="fa-brands fa-twitter text-white curs-point"></i></li>
+                <li><i class="fa-brands fa-tiktok text-white curs-point"></i></li>
+            </UL></div>
+        </div>
+    </footer>
+
+
+
+
+
+<script>
+ function toggleSidebar() {
+    const sidebar = document.querySelector(".sidebar");
+
+    if (sidebar.style.display === "flex") {
+        sidebar.style.display = "none";
+    } else {
+        sidebar.style.display = "flex";
+    }
+}
+</script>
+<script src="./main.js"></script>
+    <script src="./bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
