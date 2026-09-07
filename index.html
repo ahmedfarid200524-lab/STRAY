@@ -43,7 +43,20 @@
     </nav>
 
     <section class="hero position-relative">
-        <video src="./main-img/hero-vid.MP4" autoplay loop muted plays-inline class="hero-vid" ></video>
+      <video 
+  class="hero-vid" 
+  autoplay 
+  loop 
+  muted 
+  playsinline 
+  webkit-playsinline 
+  preload="auto"
+  disablePictureInPicture
+  disableRemotePlayback
+>
+  <source src="./main-img/hero-vid.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
         <div class="hero-det p-3 ">
             <p class="fs-12 m-hero-lg text-secondary">[ OUTERWEAR SYSTEMS 01 ]</p>
@@ -566,6 +579,7 @@
 
 <script>
  function toggleSidebar() {
+
     const sidebar = document.querySelector(".sidebar");
 
     if (sidebar.style.display === "flex") {
@@ -574,6 +588,44 @@
         sidebar.style.display = "flex";
     }
 }
+
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const heroVid = document.querySelector('.hero-vid');
+
+    const tryPlay = () => {
+      const playPromise = heroVid.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Autoplay was blocked — retry on first user interaction
+          const resumePlay = () => {
+            heroVid.play();
+            document.removeEventListener('click', resumePlay);
+            document.removeEventListener('touchstart', resumePlay);
+          };
+          document.addEventListener('click', resumePlay);
+          document.addEventListener('touchstart', resumePlay);
+        });
+      }
+    };
+
+    // Ensure muted is set via JS too (some browsers respect this more reliably)
+    heroVid.muted = true;
+    tryPlay();
+
+    // Re-trigger play if tab becomes visible again (some browsers pause on tab switch)
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && heroVid.paused) {
+        tryPlay();
+      }
+    });
+  });
+
+  heroVid.addEventListener('ended', () => {
+  heroVid.currentTime = 0;
+  heroVid.play();
+});
 </script>
 <script src="./main.js"></script>
     <script src="./bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
