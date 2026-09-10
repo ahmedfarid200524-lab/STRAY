@@ -6,20 +6,21 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.css">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <title>Document</title>
+    <title>STRAY</title>
 </head>
 <body>
-    
-    <nav >
+     <nav >
         <div class="d-flex justify-content-between align-items-center  position-fixed w-100 p-3 pb-1 ps-5 pe-5 z-3 nav-color">
             <div class="nav-logo "><img src="./main-img/stray-logo.png" alt="" class="w-100"></div>
             <div>
                 <ul class="list-unstyled d-flex gap-5 justify-content-center align-items-center mb-0 " >
-                    <li class="nav-menu hide"><a class="text-decoration-none " href="">COLLECTION Ⓞ   </a></li>
+                    <li class="nav-menu hide"><a class="text-decoration-none " href="#collection">COLLECTION Ⓞ   </a></li>
                     <li class="nav-menu hide"><a class="text-decoration-none " href="">SHOP Ⓞ  </a></li>
-                    <li class="nav-menu hide"><a class="text-decoration-none " href="">ABOUT Ⓞ </a></li>
-                    <li class="nav-menu hide"><a class="text-decoration-none " href="">LOOKBOOK Ⓞ </a></li>
-                    <li class="nav-menu hide"><a class="text-decoration-none " href=""> CONTACT Ⓞ </a></li>
+                    <li class="nav-menu hide"><a class="text-decoration-none " href="#TESTIMONIALS">ABOUT Ⓞ </a></li>
+                    <li class="nav-menu hide"><a class="text-decoration-none " href="#lookbook">LOOKBOOK Ⓞ </a></li>
+                    <li class="nav-menu hide">
+  <a class="text-decoration-none" href="" data-bs-toggle="modal" data-bs-target="#contactModal"> CONTACT Ⓞ </a>
+</li>
                    
                 </ul>
             </div>
@@ -31,16 +32,20 @@
                      <li onclick=toggleSidebar() class="sidebar-tab"  ><i class="fa-solid fa-bars fs-5 mt-2 text-white "></i></li>
                 </ul>
                  <ul class="list-unstyled  gap-3 p-3 mb-0 sidebar" >
-                    <li class="nav-menu"><a class="text-decoration-none " href="">COLLECTION Ⓞ   </a></li>
+                    <li class="nav-menu"><a class="text-decoration-none " href="#collection">COLLECTION Ⓞ   </a></li>
                     <li class="nav-menu"><a class="text-decoration-none " href="">SHOP Ⓞ  </a></li>
-                    <li class="nav-menu"><a class="text-decoration-none " href="">ABOUT Ⓞ </a></li>
-                    <li class="nav-menu"><a class="text-decoration-none " href="">LOOKBOOK Ⓞ </a></li>
-                    <li class="nav-menu"><a class="text-decoration-none " href=""> CONTACT Ⓞ </a></li>
+                    <li class="nav-menu"><a class="text-decoration-none " href="#TESTIMONIALS">ABOUT Ⓞ </a></li>
+                    <li class="nav-menu"><a class="text-decoration-none " href="#lookbook">LOOKBOOK Ⓞ </a></li>
+                    <li class="nav-menu ">
+  <a class="text-decoration-none" href="" data-bs-toggle="modal" data-bs-target="#contactModal"> CONTACT Ⓞ </a>
+</li>
                     
                 </ul>
             </div>
         </div>
     </nav>
+    <div id="main-page" class="">
+   
 
     <section class="hero position-relative">
       <video 
@@ -95,7 +100,7 @@
     <section class="aurora-img" tabindex="1"></section>
     <section class="aurora-img-mob" tabindex="1"></section>
 
-    <section class="products " tabindex="2">
+    <section class="products " tabindex="2" id="collection">
         <h2 class="text-white fw-bold">NEW COLLECTION</h2>
     
 
@@ -121,24 +126,26 @@
   <div class="tab-pane fade show active" id="pills-ALL" role="tabpanel" aria-labelledby="ALL-tab" tabindex="0">
     
     <div class="d-flex justify-content-around flex-wrap">
-         <div class="product-card position-relative">
-        <div ><i class="fa-regular fa-heart like "></i></div>
-        <img src="./product-img/tee1.png" alt="" class="product-card-img">
-        <div class="text-white mt-3">
-            <p class="mb-0 fs-12">AURORA STRAY</p>
-            <p class="mb-0">BLACK HENLEY TEE</p>
-            <div class="d-flex align-items-center gap-2">
-                <div class="black-c"></div>
-                <p class="mb-0">BLACK</p>
-            </div>
+      <div class="product-card position-relative">
+    <div><i class="fa-regular fa-heart like"></i></div>
+    <img src="./product-img/tee1.png" alt="" class="product-card-img">
+    <div class="text-white mt-3">
+        <p class="mb-0 fs-12">AURORA STRAY</p>
+        <p class="mb-0 product-name">BLACK HENLEY TEE</p>
+        <p class="mb-0 product-price">99$</p>
+        <div class="d-flex align-items-center gap-2">
+            <div class="black-c"></div>
+            <p class="mb-0">BLACK</p>
         </div>
     </div>
+</div>
     <div class="product-card position-relative">
         <div ><i class="fa-regular fa-heart like "></i></div>
         <img src="./product-img/tee2.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">AURORA STRAY</p>
-            <p class="mb-0">GRAY HENLEY TEE</p>
+            <p class="mb-0 product-name">GRAY HENLEY TEE</p>
+            <p class="mb-0 product-price">99$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="gray-c"></div>
                 <p class="mb-0">GRAY</p>
@@ -150,7 +157,8 @@
         <img src="./product-img/tee3.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">STRAY B</p>
-            <p class="mb-0">BLACK BASIC TEE</p>
+            <p class="mb-0 product-name">BLACK BASIC TEE</p>
+            <p class="mb-0 product-price">79$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="black-c"></div>
                 <p class="mb-0">BLACK</p>
@@ -162,7 +170,8 @@
         <img src="./product-img/j1.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">AURORA BLACK </p>
-            <p class="mb-0">BLACK PUFFER JACKET </p>
+            <p class="mb-0 product-name">BLACK PUFFER JACKET </p>
+            <p class="mb-0 product-price">199$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="black-c"></div>
                 <p class="mb-0">BLACK</p>
@@ -174,7 +183,8 @@
         <img src="./product-img/j2.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">AURORA SILVER </p>
-            <p class="mb-0">SILVER PUFFER JACKET </p>
+            <p class="mb-0 product-name">SILVER PUFFER JACKET </p>
+            <p class="mb-0 product-price">199$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="black-c"></div>
                 <p class="mb-0">SILVER</p>
@@ -186,7 +196,8 @@
         <img src="./product-img/j3.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">AURORA CAMEL LEATHER </p>
-            <p class="mb-0">LEATHER JACKET </p>
+            <p class="mb-0 product-name">LEATHER JACKET </p>
+            <p class="mb-0 product-price">259$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="camel-c"></div>
                 <p class="mb-0">CAMEL</p>
@@ -198,7 +209,8 @@
         <img src="./product-img/j4.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">AURORA CAMEL LEATHER </p>
-            <p class="mb-0">LEATHER JACKET </p>
+            <p class="mb-0 product-name">LEATHER JACKET </p>
+            <p class="mb-0 product-price">259$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="black-c"></div>
                 <p class="mb-0">BLACK</p>
@@ -210,7 +222,8 @@
         <img src="./product-img/p1.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">AURORA SWEATS </p>
-            <p class="mb-0">GRAY SWEATPAMTS </p>
+            <p class="mb-0 product-name">GRAY SWEATPAMTS </p>
+            <p class="mb-0 product-price">89$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="gray-c"></div>
                 <p class="mb-0">GRAY</p>
@@ -222,7 +235,8 @@
         <img src="./product-img/tee2.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">AURORA SWEATS </p>
-            <p class="mb-0">BLACK SWEATPAMTS </p>
+            <p class="mb-0 product-name">BLACK SWEATPAMTS </p>
+            <p class="mb-0 product-price">89$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="black-c"></div>
                 <p class="mb-0">BLACK</p>
@@ -234,7 +248,8 @@
         <img src="./product-img/tee3.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">AURORA SWEATS </p>
-            <p class="mb-0">cameo SWEATPAMTS </p>
+            <p class="mb-0 product-name">cameo SWEATPAMTS </p>
+            <p class="mb-0 product-price">89$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="cameo-c"></div>
                 <p class="mb-0">cameo</p>
@@ -254,23 +269,25 @@
   <div class="tab-pane fade " id="pills-TEES" role="tabpanel" aria-labelledby="TEES-tab" tabindex="0">
     <div class="d-flex justify-content-around flex-wrap"> 
     <div class="product-card position-relative">
-        <div ><i class="fa-regular fa-heart like "></i></div>
-        <img src="./product-img/tee1.png" alt="" class="product-card-img">
-        <div class="text-white mt-3">
-            <p class="mb-0 fs-12">AURORA STRAY</p>
-            <p class="mb-0">BLACK HENLEY TEE</p>
-            <div class="d-flex align-items-center gap-2">
-                <div class="black-c"></div>
-                <p class="mb-0">BLACK</p>
-            </div>
+    <div><i class="fa-regular fa-heart like"></i></div>
+    <img src="./product-img/tee1.png" alt="" class="product-card-img">
+    <div class="text-white mt-3">
+        <p class="mb-0 fs-12">AURORA STRAY</p>
+        <p class="mb-0 product-name">BLACK HENLEY TEE</p>
+        <p class="mb-0 product-price">99$</p>
+        <div class="d-flex align-items-center gap-2">
+            <div class="black-c"></div>
+            <p class="mb-0">BLACK</p>
         </div>
     </div>
+</div>
     <div class="product-card position-relative">
         <div ><i class="fa-regular fa-heart like "></i></div>
         <img src="./product-img/tee2.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">AURORA STRAY</p>
-            <p class="mb-0">GRAY HENLEY TEE</p>
+            <p class="mb-0 product-name">GRAY HENLEY TEE</p>
+            <p class="mb-0 product-price">99$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="gray-c"></div>
                 <p class="mb-0">GRAY</p>
@@ -282,7 +299,8 @@
         <img src="./product-img/tee3.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">STRAY B</p>
-            <p class="mb-0">BLACK BASIC TEE</p>
+            <p class="mb-0 product-name">BLACK BASIC TEE</p>
+            <p class="mb-0 product-price">79$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="black-c"></div>
                 <p class="mb-0">BLACK</p>
@@ -303,7 +321,8 @@
         <img src="./product-img/j1.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">AURORA BLACK </p>
-            <p class="mb-0">BLACK PUFFER JACKET </p>
+            <p class="mb-0 product-name">BLACK PUFFER JACKET </p>
+            <p class="mb-0 product-price">199$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="black-c"></div>
                 <p class="mb-0">BLACK</p>
@@ -315,7 +334,8 @@
         <img src="./product-img/j2.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">AURORA SILVER </p>
-            <p class="mb-0">SILVER PUFFER JACKET </p>
+            <p class="mb-0 product-name">SILVER PUFFER JACKET </p>
+            <p class="mb-0 product-price">199$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="black-c"></div>
                 <p class="mb-0">SILVER</p>
@@ -327,7 +347,8 @@
         <img src="./product-img/j3.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">AURORA CAMEL LEATHER </p>
-            <p class="mb-0">LEATHER JACKET </p>
+            <p class="mb-0 product-name">LEATHER JACKET </p>
+            <p class="mb-0 product-price">259$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="camel-c"></div>
                 <p class="mb-0">CAMEL</p>
@@ -339,7 +360,8 @@
         <img src="./product-img/j4.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">AURORA CAMEL LEATHER </p>
-            <p class="mb-0">LEATHER JACKET </p>
+            <p class="mb-0 product-name">LEATHER JACKET </p>
+            <p class="mb-0 product-price">259$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="black-c"></div>
                 <p class="mb-0">BLACK</p>
@@ -358,7 +380,8 @@
         <img src="./product-img/p1.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">AURORA SWEATS </p>
-            <p class="mb-0">GRAY SWEATPAMTS </p>
+            <p class="mb-0 product-name">GRAY SWEATPAMTS </p>
+            <p class="mb-0 product-price">89$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="gray-c"></div>
                 <p class="mb-0">GRAY</p>
@@ -370,7 +393,8 @@
         <img src="./product-img/tee2.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">AURORA SWEATS </p>
-            <p class="mb-0">BLACK SWEATPAMTS </p>
+            <p class="mb-0 product-name">BLACK SWEATPAMTS </p>
+            <p class="mb-0 product-price">89$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="black-c"></div>
                 <p class="mb-0">BLACK</p>
@@ -382,7 +406,8 @@
         <img src="./product-img/tee3.png" alt="" class="product-card-img">
         <div class="text-white mt-3">
             <p class="mb-0 fs-12">AURORA SWEATS </p>
-            <p class="mb-0">cameo SWEATPAMTS </p>
+            <p class="mb-0 product-name">cameo SWEATPAMTS </p>
+            <p class="mb-0 product-price">89$</p>
             <div class="d-flex align-items-center gap-2">
                 <div class="cameo-c"></div>
                 <p class="mb-0">cameo</p>
@@ -397,7 +422,7 @@
 
     </section>
 
-    <section class="mountain" tabindex="3">
+    <section class="mountain" tabindex="3" id="lookbook">
         <div class="inner-mountain"> 
         <p class="text-secondary mb-0"> [ BUILT DIFFERENT ]</p>
         <P class="fs-2 fw-bold mb-0 text-white">BUILT FOR COLD</P>
@@ -536,7 +561,7 @@
         </div>
         
 
-        </div>
+        
         <div class="change-test">
             <button onclick=" changetestmoials()">MORE</button>
         </div>
@@ -560,10 +585,172 @@
 
     </section>
 
-    <footer class="bg-black">
+    
+
+</div>
+
+<div id="prod-page" class="product-page d-none ">
+    <div id="backbtn" class="backbtn"> <i class="fa-solid fa-chevron-left text-white"></i><p class="text-white mb-0 ">back</p></div>
+    
+<div class="product-frame">
+    
+    <img src="./product-img/j1.png" alt="" class="w-100 prod-page-img">
+</div>
+
+<div class="mt-4">
+    <h2 class="text-white"> stray black jacket</h2>
+    <h3 class="text-white mb-3">199$</h3>
+    <div class="d-flex  mb-3 gap-1 align-items-center">
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <i class="fa-solid fa-star text-white fs-12"></i>
+                    <div class="text-secondary ms-2">
+                        5.0 ( 122 REVIEWS)
+                    </div>
+                </div>
+    <div class="d-flex mb-3">
+        
+        <p class="text-white">SIZE:</p>
+        <ul class="size-choice">
+            <li><div class="active-size size">XS</div></li>
+            <li><div  class="size">S</div></li>
+            <li><div class="size">M</div></li>
+            <li><div class="size">L</div></li>
+            <li><div class="size">XL</div></li>
+        </ul>
+    </div>
+    <div class="products-page-btns">
+    <button class="addto-cart-btn">ADD TO CART</button>
+    <button class="buynow-btn">BUY NOW</button>
+    </div>
+    <div class="d-flex  gap-2 mt-3 text-secondary">
+        <div ><i class="fa-regular fa-heart wishlistbtn  "></i></div>
+
+        <p>ADD TO WISHLIST</p>
+    </div>
+  
+<div class="accordion-page"> 
+   <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="modal" data-bs-target="#productDetailsModal">
+            PRODUCT DETAILS
+      </button>
+    </h2>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="modal" data-bs-target="#sizeChartModal">
+        SIZE CHART
+      </button>
+    </h2>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="modal" data-bs-target="#washingModal">
+        WASHING INSTRUCTIONS
+      </button>
+    </h2>
+  </div>
+</div>
+</div>
+
+<!-- Product Details Modal -->
+<div class="modal fade" id="productDetailsModal" tabindex="-1" aria-labelledby="productDetailsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productDetailsModalLabel">Product details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Built with a structured boxy silhouette, the Essential Tee delivers a relaxed fit with a clean, oversized profile. Heavyweight cotton gives it a premium feel while maintaining shape throughout wear.
+        <ul>
+          <li>Heavyweight cotton construction</li>
+          <li>Boxy, oversized fit</li>
+          <li>Dropped shoulders</li>
+          <li>Ribbed crew neckline</li>
+          <li>Minimal branding</li>
+          <li>Designed for everyday wear</li>
+          <li>Unisex fit</li>
+        </ul>
+        Fit: Boxy / Oversized<br>
+        Fabric: Premium heavyweight cotton
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Size Chart Modal -->
+<div class="modal fade" id="sizeChartModal" tabindex="-1" aria-labelledby="sizeChartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sizeChartModalLabel">Size chart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="./main-img/ChatGPT Image Sep 10, 2026, 02_37_05 PM.png" alt="Size chart" width="100%">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Washing Instructions Modal -->
+<div class="modal fade" id="washingModal" tabindex="-1" aria-labelledby="washingModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="washingModalLabel">Wash & care</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <strong>01 — Wash cold</strong><br>
+        Machine wash cold at 30°C / 86°F. Turn garment inside out before washing.<br><br>
+        <strong>02 — Gentle cycle</strong><br>
+        Use a gentle cycle with similar colors. Avoid aggressive washing.<br><br>
+        <strong>03 — Do not bleach</strong><br>
+        Do not use bleach or harsh chemical detergents.<br><br>
+        <strong>04 — No high heat</strong><br>
+        Tumble dry low or air dry. Avoid high temperatures to protect the fabric and graphics.<br><br>
+        <strong>05 — Do not iron prints</strong><br>
+        If ironing is necessary, turn the garment inside out and avoid direct heat on printed or embroidered areas.<br><br>
+        <strong>06 — Hang or lay flat</strong><br>
+        Air dry whenever possible. Hang or lay flat to preserve the garment's shape.<br><br>
+        <em>Stray care:</em> treat it well. Wear it hard. Keep it longer.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Size Chart Modal -->
+<div class="modal fade" id="sizeChartModal" tabindex="-1" aria-labelledby="sizeChartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sizeChartModalLabel">Size Chart</h5>
+        <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="./main-img/ChatGPT Image Sep 10, 2026, 02_37_05 PM.png" alt="Size chart" width="100%">
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<div class="side-img"><img src="./main-img/sideimage.png" alt="" width="100%"></div>
+</div>
+
+<footer class="bg-black">
         <div class="d-flex justify-content-between align-items-center">
             <div class="text-white fs-5">STRAY</div>
-            <div class="text-white">©2025 STRAY. ALL RIGHTS RESERVED</div>
+            <div class="text-white footer-rights">©2025 STRAY. ALL RIGHTS RESERVED</div>
+            <div class="text-white footer-rights-sm">©2025 STRAY. ALL RIGHTS RESERVED</div>
             <div><UL class="d-flex justify-content-between align-items-center list-unstyled text-white gap-2 mb-0">
                 <li><i class="fa-brands fa-instagram text-white curs-point"></i></li>
                 <li><i class="fa-brands fa-facebook-f text-white curs-point"></i></li>
@@ -573,9 +760,33 @@
         </div>
     </footer>
 
-
-
-
+    <!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Contact us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="contactName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="contactName" placeholder="Your name">
+          </div>
+          <div class="mb-3">
+            <label for="contactEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="contactEmail" placeholder="you@example.com">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-dark" id="contactSubmitBtn">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
  function toggleSidebar() {

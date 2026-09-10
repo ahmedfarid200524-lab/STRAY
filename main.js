@@ -183,3 +183,94 @@ document.getElementById("TESTIMONIALS").innerHTML=`
        
 `
 }
+const prod_buy = document.querySelectorAll(".product-card");
+
+
+prod_buy.forEach(function(card) {
+  card.addEventListener("click", function() {
+    console.log(card);
+  });
+});
+
+
+
+const mainpage= document.getElementById("main-page");
+const prodPage = document.getElementById("prod-page");
+
+prod_buy.forEach(function(card) {
+  card.addEventListener("click", function(e) {
+    // don't trigger when clicking the heart/like icon
+    if (e.target.closest(".like")) return;
+
+    const img = card.querySelector(".product-card-img").src;
+    const name = card.querySelector(".product-name").textContent;
+    const price = card.querySelector(".product-price").textContent;
+
+    // populate the detail page
+    prodPage.querySelector(".prod-page-img").src = img;
+    prodPage.querySelector("h2").textContent = name;
+    prodPage.querySelector("h3").textContent = price;
+
+    // show the detail page
+    prodPage.classList.remove("d-none");
+    mainpage.classList.add("d-none");
+  });
+});
+
+
+const backbtn =document.getElementById("backbtn");
+
+backbtn.addEventListener("click",function(){
+    prodPage.classList.add("d-none");
+    mainpage.classList.remove("d-none");
+});
+const size= document.querySelectorAll(".size");
+console.log(size);
+
+size.forEach(function(s) {
+  s.addEventListener("click", function() {
+    size.forEach(function(el) {
+      el.classList.remove("active-size");
+    });
+    s.classList.add("active-size");
+  });
+});
+
+document.getElementById("contactSubmitBtn").addEventListener("click", function() {
+  const nameInput = document.getElementById("contactName");
+  const emailInput = document.getElementById("contactEmail");
+
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+
+  if (!name || !email) {
+    alert("Please fill in both name and email.");
+    return;
+  }
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+
+  // At this point name/email are valid — send them somewhere.
+  console.log("Submitting:", { name, email });
+
+  // Example: send to a backend endpoint
+  // fetch("/api/contact", {
+  //   method: "POST",
+  //   headers: { "Content-Type": "application/json" },
+  //   body: JSON.stringify({ name, email })
+  // });
+
+  // Close the modal and reset the form
+  const modalEl = document.getElementById("contactModal");
+  const modalInstance = bootstrap.Modal.getInstance(modalEl);
+  modalInstance.hide();
+
+  nameInput.value = "";
+  emailInput.value = "";
+
+  alert("Thanks! We'll be in touch.");
+});
