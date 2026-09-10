@@ -274,3 +274,26 @@ document.getElementById("contactSubmitBtn").addEventListener("click", function()
 
   alert("Thanks! We'll be in touch.");
 });
+
+
+
+const aurora = document.querySelector('.aurora-img-mob');
+
+function updateParallax() {
+  const rect = aurora.getBoundingClientRect();
+  const speed = 0.4;
+  const offset = rect.top * speed;
+  aurora.style.backgroundPosition = `center calc(50% + ${offset}px)`;
+}
+
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      updateParallax();
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
+updateParallax();
